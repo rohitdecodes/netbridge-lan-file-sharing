@@ -1,187 +1,106 @@
-📡 NetBridge
+# NetBridge
 
-Local-first File Sharing, Streaming & LAN Communication Tool
+## Overview
+NetBridge is a local-first networking project that enables file sharing, media streaming,
+and device communication over a Local Area Network (LAN) without relying on cloud platforms
+or continuous internet connectivity.
 
-🔍 What is NetBridge?
+The project is designed for restricted or offline environments and focuses on understanding
+real-world networking behavior rather than building a large-scale application.
 
-NetBridge is a local-first network service that enables devices to share files, stream media, and communicate over a local network (LAN) without relying on cloud platforms or continuous internet connectivity.
+---
 
-It is designed to work in restricted or offline environments, and can optionally run over a VPN-based virtual LAN to extend access across distance while maintaining privacy.
+## Problem Statement
+Most modern file-sharing and media streaming solutions depend on cloud infrastructure,
+internet connectivity, and public servers. This creates limitations in environments where
+internet access is restricted, unstable, or unnecessary.
 
-🎯 Why NetBridge Was Built
+There is a need to understand how direct device-to-device communication works using
+local networking principles without relying on cloud services.
 
-Most modern file sharing solutions depend on:
+---
 
-Uploading files to the cloud
+## Project Description
+NetBridge operates as a local server running on a host device such as a laptop or PC.
+Other devices connect to the server using the host’s IP address and port through a web browser.
 
-Internet connectivity
+Files and media are accessed directly from the host system without uploading data to
+third-party platforms. The same application can operate across different network modes
+without requiring changes to the core implementation.
 
-Public servers and storage duplication
+The project prioritizes networking fundamentals, system behavior, and architectural
+understanding over feature complexity.
 
-NetBridge was built to explore an alternative approach:
+---
 
-Direct device-to-device access
+## Key Features
+- Local-first file sharing and media access
+- Direct device-to-device communication
+- No cloud dependency for LAN operation
+- Browser-based client access
+- Works across multiple network modes
 
-Local networking instead of cloud dependency
+---
 
-Understanding how real networks behave in practice
+## Supported Network Modes
+- Local Area Network (Wi-Fi, Hotspot, Ethernet)
+- Bluetooth Personal Area Network (learning-oriented)
+- VPN-based Virtual LAN using ZeroTier
 
-The project prioritizes networking concepts and system behavior over complex application development.
+LAN mode works without internet connectivity.
+VPN mode enables remote access by creating a virtual private network.
 
-⚙️ How NetBridge Works (High-Level)
+---
 
-NetBridge runs as a local server on a laptop or PC.
+## Networking Concepts Explored
+- Client–Server architecture
+- IP addressing and private networks
+- Port-based services
+- Network Address Translation (NAT) behavior
+- VPNs as overlay networks
+- Firewall behavior and access control
+- Local versus cloud networking trade-offs
 
-Other devices (mobiles or laptops) connect using the server’s IP address and port via a browser.
+---
 
-Files and media are accessed directly from the host device, without uploading to any third-party service.
+## Use Cases
+- File sharing in offline or restricted environments
+- Media streaming without file duplication
+- Secure sharing within a private network
+- Learning and demonstration of real-world networking concepts
 
-Supported Network Modes
+---
 
-LAN (Wi-Fi / Hotspot / Ethernet) — works without internet
+## Ethical Disclaimer
+This project is developed strictly for educational and learning purposes.
+It is intended to improve understanding of networking concepts and system behavior.
+All demonstrations are performed with user awareness and informed consent.
+The project follows ethical guidelines and responsible research practices.
 
-Bluetooth PAN — limited range, learning-oriented
+---
 
-VPN (ZeroTier) — virtual LAN over internet for extended distance
+## Technologies Used
+- Python (Flask)
+- Local Area Networking (LAN)
+- VPN-based Virtual LAN (ZeroTier)
+- HTTP over private networks
 
-The same application works across all modes without code changes.
+---
 
-🌐 Networking Concepts Explored
+## Project Status
+- Feature-complete for learning purposes
+- No plans for public or cloud hosting
+- Intended as a networking and systems learning project
 
-This project helped in understanding:
+---
 
-Client–Server architecture
+## Learning Outcomes
+- Practical understanding of LAN and VPN communication
+- Exposure to real-world networking constraints
+- Improved understanding of client-server systems
+- Awareness of local versus cloud-based architectures
 
-IP addressing (localhost vs 192.168.x.x vs 10.x.x.x)
+---
 
-Port-based services and access
-
-NAT limitations and why public IP exposure often fails
-
-VPNs as overlay (virtual) networks
-
-Firewall behavior and access constraints
-
-Local vs cloud trade-offs
-
-🧠 Where NetBridge Is Useful (Use Cases)
-1️⃣ Offline or Restricted Environments
-
-College hostels and labs
-
-Offices with blocked cloud services
-
-Areas with unstable or no internet
-
-2️⃣ Streaming Without File Duplication
-
-Watch large videos directly from another device
-
-Avoid downloading or copying files
-
-Save storage space on mobile devices
-
-3️⃣ Secure Local Sharing
-
-Files remain inside the local or private network
-
-No public exposure or third-party servers
-
-Reduced attack surface
-
-4️⃣ Learning & Demonstration
-
-Practical understanding of LAN vs VPN
-
-Demonstrating real-world networking constraints
-
-Troubleshooting connectivity issues
-
-🔐 VPN Mode (Optional)
-
-NetBridge can operate over a VPN-based virtual LAN using tools like ZeroTier.
-
-VPN creates a private network between devices
-
-Devices behave as if they are on the same Wi-Fi network
-
-Useful when devices are physically distant
-
-Note:
-VPN mode requires internet connectivity.
-LAN mode works completely offline.
-
-
-NetBridge is not intended to replace cloud platforms.
-
-It is different because it:
-
-Is local-first by design
-
-Supports direct streaming, not just file transfer
-
-Focuses on network behavior and architecture
-
-Works across LAN and VPN without modification
-
-Avoids public exposure intentionally
-
-🧩 Is NetBridge “Better” Than Existing Tools?
-
-No — and that is intentional.
-
-NetBridge is not better for:
-
-Global public sharing
-
-Large-scale distribution
-
-Cloud-based workflows
-
-NetBridge is better suited for:
-
-Local and private sharing
-
-Learning networking concepts
-
-Environments where cloud access is unnecessary or restricted
-
-It solves a different problem.
-
-⚠️ Disclaimer
-
-This project was built with guided assistance to understand:
-
-Networking fundamentals
-
-System behavior
-
-Real-world constraints
-
-The primary focus was networking and architecture, not advanced software development or complex coding.
-
-🛠 Technologies Used
-
-Python (Flask)
-
-Local Networking (LAN)
-
-VPN (ZeroTier)
-
-HTTP over private networks
-
-📌 Project Status
-
-Feature-complete for learning purposes
-
-No plans for public exposure or cloud hosting
-
-Intended as a networking / systems learning project
-
-🧭 Key Takeaway
-
-NetBridge is less about building an application and more about understanding how applications behave on real networks.
-
-👤 Author
-
-Built as a learning project focused on Networking, Cloud fundamentals, and System Design.
+## Author
+Built as a learning project focused on Networking, Cloud Fundamentals, and System Design.
